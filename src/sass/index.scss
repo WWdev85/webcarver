@@ -1,0 +1,35 @@
+
+@import './_variables.scss';
+@import './_header.scss';
+@import './_navigation.scss';
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body{
+    background-color: grey;
+    font-family: $secondaryFont;
+
+}
+
+.link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+.backgroundImage{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  
+    
+}

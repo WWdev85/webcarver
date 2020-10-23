@@ -1,0 +1,46 @@
+@import './_variables.scss';
+
+.header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    background-color: white;
+
+
+    .header__menuButton{
+        background-image: url("../../public/images/menu.svg");
+        //background-color: grey;
+        width: 40px;
+        height: 40%;
+
+        position: absolute;
+        top: 50%;
+        right:10px;
+        transform: translateY(-50%);
+        cursor:  pointer;
+
+        &--active{
+            background-image: url("../../public/images/cancel.svg");
+            height: 30%;
+        }
+
+    }
+
+    .header__logoImg{
+        background-image: url("../../public/images/webcarver_logo.svg");
+        //background-color: yellow;
+        height: 100%;
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        
+     
+
+  
+        
+    }
+}
