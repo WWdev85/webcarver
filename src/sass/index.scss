@@ -2,6 +2,7 @@
 @import './_variables.scss';
 @import './_header.scss';
 @import './_navigation.scss';
+@import './_titlePage.scss';
 
 
 *{
@@ -12,8 +13,64 @@
 }
 
 body{
-    background-color: grey;
+    
     font-family: $secondaryFont;
+
+}
+
+
+
+.router{
+    //max-width: 1280px;
+    
+    margin: 70px auto 0 auto;
+
+    @media (min-width: 1024px) {
+        font-size: 14px;
+        line-height: 40px;
+        margin: 0px auto 0 auto;
+    }
+}
+
+.titles{
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 0;
+    @media(min-width: 480px){
+        font-size: 25px;
+        
+     }
+     @media(min-width: 580px){
+        font-size: 30px;
+   
+     }
+     @media(min-width: 680px){
+        font-size: 35px;
+        padding: 30px 0;
+   
+     }
+     @media(min-width: 768px){
+        font-size: 40px;
+        padding: 35px 0;
+     
+     }
+     @media(min-width: 1024px){
+        font-size: 40px;
+        padding: 70px 0;
+     }
+}
+
+.texts{
+    font-size: 15px;
+    line-height: 30px;
+    font-family: $primaryFont;
+    @media(min-width: 768px){
+        font-size: 18px;
+        line-height: 36px;
+           
+     }
 
 }
 
@@ -21,9 +78,24 @@ body{
     text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 50px;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
+
+
+
+    @media(min-width: 580px){
+        font-size: 20px;
+        line-height: 60px;
+    }
+    
+    @media(orientation: landscape) and (max-height: 700px) {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    @media(min-width: 1024px){
+        font-size: 18px;
+    }
 }
 
 .backgroundImage{
@@ -32,4 +104,16 @@ body{
     background-position: center;
   
     
+}
+
+.scrollUp{
+    position: fixed;
+    background-image: url("../../public/images/arrowUp.svg");
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: $primaryColor;
+    cursor: pointer;
 }

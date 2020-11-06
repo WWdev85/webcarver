@@ -3,6 +3,7 @@
 
 .navigation{
     position: fixed;
+    z-index: 3;
     top: 70px;
     bottom: 0;
     left:50%;
@@ -11,13 +12,27 @@
     overflow: hidden;
     transition: 0.3s;
 
-    &--active{
-        background-color: rgba(256,256,256,0.8);
+    @media(min-width: 1024px){
+        top: 0;
+        bottom:auto;
         left:0;
         right:0;
+        height: 80px;
+        position: relative;
+        background-color:$secondaryColor;
+     }
+
+    &--active{
+        background-color: rgba(256,256,256,0.95);
+        left:0;
+        right:0;
+        @media(min-width: 1024px){
+            background-color:white;
+         }
     }
     .navigation__wrapper{
         width: 100vw;
+        max-width: 1280px;
         height: calc(100vh - 70px);
         position: absolute;
         left: 50%;
@@ -25,62 +40,148 @@
         top:0;
         display: flex;
         flex-direction: column;
+    
+        @media(min-width: 1024px){
+            flex-direction: row;
+            width: 80%;
+            height: 100%;
+         }
+  
         .navigation__list{
-            flex-basis: 60%;
+            flex-basis: 70%;
             list-style: none;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media(min-width: 1024px){
+                padding-left: 20px;
+                flex-basis: 75%;
+                flex-direction: row;
+                align-items: center;
+             }
             .navigation__item{
                 width: 100%;
-               
 
 
                 .navigation__link{
+                    transition: 0.3s;
+                    position: relative;
+                 
+                    &:hover{
+                        color: $primaryColor;
+
+                    }
+
+                   
+
+                
                     &--active{
                         display: block;
                         background-color:$primaryColor;
                         width: 100%;
+                        @media(min-width: 1024px){
+                            flex-direction: row;
+                            background-color:transparent;
+                            width: auto;
+                            display: inline;
+                            color: $primaryColor;
+                            &:after{
+                                content: "";
+                                bottom: -5px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 110%;
+                                height: 2px;
+                                position: absolute;
+                                background-color: $primaryColor;
+                                animation: underline 0.2s ease;
+                            }
+                        }
+
+                        @keyframes underline {
+                            0%{
+                                left: -20%;
+                            }
+                            100%{
+                                left: 70%;
+                            }
+                            
+                        }
                     }
                 }
             }
         }
         .navigation__contact{
-            flex-basis: 40%;
-
+            flex-basis: 30%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             text-align: center;
+            @media(orientation: landscape) and (max-height: 700px) {
+                justify-content: center;
+            }
+            @media(min-width: 1024px){
+              flex-basis: 20%;
+
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-end;
+
+              text-align: right;
+              
+            }
+            
             
             .navigation__phone{
                 position: relative;
-                font-size: 20px;
-                color: $primaryColor;
+                font-size: 18px;
+
+                @media(min-width: 580px){  
+                    font-size: 25px;
+                }
+      
+                @media(orientation: landscape) and (max-height: 700px) {
+                    font-size: 17px;
+                }
+                @media(min-width: 1024px){
+                    flex-basis: 100%;
+                  
+                    font-size: 18px;
+                }
         
                 
                 .navigation__phoneIcon{
-                    position: absolute;
-                    left: -30px;
-                    top: 50%;
-                    transform: translateY(-50%);
                     display: inline-block;
-                    padding-left: 5px;
+                    transform: translateY(18%);
+                    margin-right: 15px;
                     background-image: url(../../public/images/phone.svg);
-                    width: 30px;
-                    height: 30px;
+                    width: 25px;
+                    height: 25px;
+
+                    @media(min-width: 580px){  
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @media(orientation: landscape) and (max-height: 700px) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    @media(min-width: 1024px){
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
     
             }
-            .navigation__facebookIcon{
-                display: block;
-                margin: 0 auto;
-                background-image: url(../../public/images/facebook.svg);
-                width: 40px;
-                height: 40px;
-
-            }
+            // .navigation__facebookIcon{
+            //     display: block;
+            //     margin: 10px auto;
+            //     background-image: url(../../public/images/facebook.svg);
+            //     width: 25px;
+            //     height: 25px;  
+         
+            // }
         }
     }
 
