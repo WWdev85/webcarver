@@ -5,7 +5,8 @@ class Scroll{
         this.header = document.querySelector(".header");
         this.navigation = document.querySelector(".navigation");
         this.navigation = document.querySelector(".navigation");
-        this.page = document.querySelector(".page");
+        this.page = document.querySelector(".router");
+        this.footer = document.querySelector(".footer");
         this.offset = 70;
         document.addEventListener("scroll", this.handleScroll.bind(this));
         this.arrowUp.addEventListener("click", this.scrollUp);
@@ -16,11 +17,13 @@ class Scroll{
             this.offset = 100;
             if(scrollY > this.offset){
                 this.navigation.style.position = "fixed";
-                this.navigation.style.opacity = "0.7";
-                this.page.style.marginTop = "80px";
+                this.navigation.style.opacity = "0.95";
+                this.page.style.transform = "translateY(80px)";
+                this.footer.style.transform = "translateY(80px)";
              }else{
                  this.navigation.style.position = "relative";
-                 this.page.style.marginTop = "0";
+                 this.page.style.transform = "translateY(0px)";
+                 this.footer.style.transform = "translateY(0)";
                  this.navigation.style.opacity = "1";
              }
         }

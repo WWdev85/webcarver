@@ -3,6 +3,11 @@
 @import './_header.scss';
 @import './_navigation.scss';
 @import './_titlePage.scss';
+@import './_footer.scss';
+@import './_contact.scss';
+@import './_realizations.scss';
+@import './_aboutUS.scss';
+@import './_offer.scss';
 
 
 *{
@@ -18,7 +23,18 @@ body{
 
 }
 
-
+.button{
+    font-family: $secondaryFont;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $primaryColor;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    display: block;
+    cursor: pointer;
+}
 
 .router{
     //max-width: 1280px;

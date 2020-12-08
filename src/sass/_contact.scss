@@ -1,0 +1,195 @@
+@import './_variables.scss';
+
+.sectionName{
+    flex-basis: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+    @media(min-width: 768px){
+        font-size: 25px; 
+        margin-bottom: 45px;     
+    }
+}
+
+.contact{
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    .contact__title{
+        flex-basis: 100%;
+    }
+
+    .form{
+        flex-basis: 80%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        @media(min-width: 768px){
+            flex-basis: 40%;    
+        }
+
+        .form__field{
+            width: 100%;
+            margin-bottom: 20px;
+            line-height: 40px;
+            border: $primaryColor 1px solid;
+        
+
+          
+        }
+        .form__message{
+            height: 200px;
+        }
+
+        .checkbox{
+            text-align: justify; 
+            line-height: 28px;
+            border: none;
+            .check{
+                margin-right: 10px;
+                margin-top: 7px;
+                overflow: hidden;
+                position: relative;
+                width: 20px;
+                height: 20px;
+                font-size: 17px;
+                cursor: pointer;
+
+                &:checked:after{
+                    content:'\2714';
+                    position: absolute;  
+                    font-size: 17px;
+                    top: 0px;
+                    left: 0;
+                    right: 0;
+                    bottom: 0px;
+                    padding-left: 3px;
+                    color:$secondaryColor;
+                    background-color: $primaryColor
+
+                 
+
+                }
+            }
+            .allow{
+                font-family: $primaryFont;
+                font-size: 15px;
+                
+            }
+        }
+
+        .errors{
+            background-color: rgba(255,0,0,0.6);
+            list-style: none;
+            text-align: left;
+            li{
+               font-size: 12px;
+               color: black;
+            }
+        }
+
+        .error{
+            border: red solid 1px;
+            color: red;
+        }
+
+
+        .form__button{
+            margin: 0 auto;
+        }
+    }
+
+    .contact__info{
+        flex-basis: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        @media(min-width: 768px){
+               flex-basis: 40%;  
+               
+        }
+        .contact__field{
+                text-decoration: none;
+                color: black;
+                display: flex;
+                margin-bottom: 20px;
+                 @media(min-width: 768px){
+                    margin-bottom: 45px;   
+                }
+
+                .contact__image{
+                    height: 30px;
+                    width: 30px;
+                    align-self: center;
+                    
+                    
+                }
+                .contact__text{
+                    margin-left: 10px;
+                
+                }
+
+                .clock{
+                    background-image: url(../../public/images/clock.svg);
+                }
+                .phone{
+                    background-image: url(../../public/images/phone2.svg);
+                }
+                .mail{
+                    background-image: url(../../public/images/mail.svg);
+                }
+                .adress{
+                    background-image: url(../../public/images/location.svg);
+                }
+                .facebook{
+                    background-image: url(../../public/images/facebook2.svg);
+                }
+                .nip{
+                    background-image: url(../../public/images/nip.svg);
+                }
+            
+        }
+    }
+
+    .map{
+        flex-basis: 90%;
+        height: 400px;
+        margin:0 auto;
+        margin-bottom: 70px;
+        border: none;
+    }
+
+    .monit{
+        
+        position: fixed;
+        left:0;
+        right: 0;
+        top:10%;
+        background-color:rgba($color: $primaryColor, $alpha: 0.6);
+        z-index: -1;
+        opacity: 0;
+        height: 200px;
+        transition: 0.5s;
+      
+
+        &--active{
+            opacity: 1;
+            z-index: 100;
+          
+        }
+
+        .monit__content{
+            
+            color: white;
+            text-align: center;
+            font-family: $secondaryFont;
+            text-transform: uppercase;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% ,-50%);
+            font-size: 20px;
+            
+
+        }
+    }
+
+}

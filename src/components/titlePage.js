@@ -34,28 +34,44 @@ class titlePage extends React.Component {
                 </div>
             </section>
             <section className="page__about">
-                <h1 className="about__title titles">Projektowanie Stron Internetowych</h1>
-                <p className="about__text texts">Oferujemy kompleksową usługę tworzenia stron oraz sklepów internetowych obejmującą:</p>
+                <h1 className="about__title titles">Projektowanie Stron <span>Internetowych</span></h1>
+                <p className="about__text texts">Tworząc dla Ciebie stronę internetową zadbamy o:</p>
                 <ul className="about__list texts" >
-                    <li className="about__listItem texts">stworzenie koncepcji,</li>
-                    <li className="about__listItem texts">stworzenie strony internetowej,</li>
-                    <li className="about__listItem texts">wdrożenie i hosting,</li>
-                    <li className="about__listItem texts">optymalizację pod kątem wyszukiwarek internetowych,</li>
-                    <li className="about__listItem texts">aktualizację treści.</li>
+                    <li className="about__listItem texts">Optymalizację,</li>
+                    <li className="about__listItem texts">Pozycjonowanie SEO,</li>
+                    <li className="about__listItem texts">Nowoczesny wygląd,</li>
+                    <li className="about__listItem texts">Szybkość ładowania,</li>
+                    <li className="about__listItem texts">Dopasowanie do urządzeń mobilnych.</li>
+                </ul>
+                <ul className="about__list texts" >
+                    <li className="about__listItem texts">Domenę i hosting,</li>
+                    <li className="about__listItem texts">System zarządzania treścią CMS,</li>
+                    <li className="about__listItem texts">Własną nazwę adresu e-mail,</li>
+                    <li className="about__listItem texts">Integrację z Google Maps,</li>
+                    <li className="about__listItem texts">Aktualizacje treści</li>
                 </ul>
              </section>
              <section className="page__offer">
-                <h1 className="page__offerTitle titles">Oferta</h1>
-                <div className="page__offerItem">
+                 <div className="page__offerWrapper">
+                    <h1 className="page__offerTitle titles">Oferta</h1>
+                    <div className="page__offerItem">
+                        <div className="offerItem__image"></div>
+                        <p className="offerItem__text link">Strona Internetowa</p>
+                        <p className="offerItem__text texts">Zaprojektujemy dla Ciebie profesjonalną stronę internetową, dostosowaną do urządzeń mobilnych.</p>
+                    </div>
+                    <div className="page__offerItem">
                     <div className="offerItem__image"></div>
-                    <p className="offerItem__text link">Strona Internetowa</p>
-                    <p className="offerItem__text texts">Zaprojektujemy dla Ciebie profesjonalną stronę internetową, dostosowaną do urządzeń mobilnych.</p>
-                </div>
-                <div className="page__offerItem">
-                <div className="offerItem__image"></div>
-                    <p className="offerItem__text link">Sklep Internetowy</p>
-                    <p className="offerItem__text texts">Sprzedawaj w internecie 24h na dobę przez 7 dni w tygodniu dzięki sklepowi internetowemu.</p>
-                </div>
+                        <p className="offerItem__text link">Sklep Internetowy</p>
+                        <p className="offerItem__text texts">Sprzedawaj w internecie 24h na dobę przez 7 dni w tygodniu dzięki sklepowi internetowemu.</p>
+                    </div>
+                    <div className="page__offerItem">
+                    <div className="offerItem__image"></div>
+                        <p className="offerItem__text link">Optymalizacja SEO</p>
+                        <p className="offerItem__text texts">Optymalizacja serwisów internetowych to szereg czynności, które mają na celu zwiększenie widoczności stron i sklepów internetowych naszych Klientów w wyszukiwarce Google.</p>
+                    </div>
+
+                 </div>
+                
        
              </section>
              <section className="page__portfolio">
@@ -66,18 +82,13 @@ class titlePage extends React.Component {
                         <p className="project__name ">Kancelaria prawna</p>
                     </div>
                     <div className="portfolio__project portfolio__webcarver">
-                        <a className = "project__link "  href="https://wasek-kancelaria.pl"></a>
-                        <p className="project__name ">Strony Internetowe</p>
+                        <a className = "project__link "  href="https://webcarver.pl"></a>
+                        <p className="project__name ">Projektowanie Stron Internetowych</p>
                     </div>
                     <div className="portfolio__arrows portfolio__arrowLeft"></div>
                     <div className="portfolio__arrows portfolio__arrowRight"></div>
                 </div>
-             </section> 
-             <section className="page__info">
-                <h1 className="info__title titles">Kontakt</h1>
-             
-             </section>     
-            
+             </section>   
         </div>
     );
 }

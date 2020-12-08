@@ -3,9 +3,13 @@ class Menu{
         this.icon = document.querySelector('.header__menuButton');
         this.navigation = document.querySelector('.navigation');
         this.links = document.querySelectorAll('.navigation__link');
+        this.footerLinks = document.querySelectorAll('.footer__link');
 
         this.icon.addEventListener("click", this.openMenu.bind(this));
         this.links.forEach((link) => {
+            link.addEventListener("click", this.changePage.bind(this));
+        })
+        this.footerLinks.forEach((link) => {
             link.addEventListener("click", this.changePage.bind(this));
         })
     }
