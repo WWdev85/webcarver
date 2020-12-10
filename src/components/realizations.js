@@ -3,7 +3,14 @@ import React, { Component } from 'react';
 
 class Realizations extends React.Component {
 
- 
+     
+    componentDidMount(){
+        window.scrollTo({
+            top: 0 ,
+            
+       });
+
+    }
    
     render(){
 

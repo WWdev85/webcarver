@@ -12,7 +12,8 @@ module.exports = {
   },
   output: {
       filename: 'js/[name]-[contenthash:4].js',
-      path: path.resolve(__dirname, '../', 'build')
+      path: path.resolve(__dirname, '../', 'build'),
+      publicPath: '/',
   },
 
 
@@ -75,13 +76,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[contenthash:4].css'
     }),
-    new CopyPlugin(
-        [
-          {
-            from: 'public',
-            to: 'public',
-          }
-        ]
-      )
+    // new CopyPlugin(
+    //     [
+    //       {
+    //         from: 'public',
+    //         to: 'public',
+    //       }
+    //     ]
+    //   )
   ]
 }

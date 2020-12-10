@@ -1,13 +1,13 @@
 
 import React from'react';
-import { BrowserRouter , Route, Link } from 'react-router-dom';
+import { BrowserRouter , Route, NavLink, Switch } from 'react-router-dom';
 
 import TitlePage from './titlePage';
 import Contact from './contact';
 import Realizations from './realizations';
 import AboutUs from './aboutUs';
 import Offer from './offer';
-
+import ErrorPage from './errorPage';
 import Menu from '../tools/menu';
 import Scroll from '../tools/scroll';
 
@@ -27,42 +27,45 @@ class App extends React.Component {
 
         return(
         <BrowserRouter>
+  
             <header className="header">
-                <a href="#" className="header__logoImg backgroundImage"></a>
+                <NavLink className="header__logoImg backgroundImage" to="/" exact></NavLink>
                 <div className="header__menuButton backgroundImage"></div>
             </header>
             <nav className="navigation">
                 <div className="navigation__wrapper">
                     <ul className="navigation__list">
-                        <li className="navigation__item"><Link className="navigation__link navigation__link--active link" data-id="0" to="/">Strona Główna</Link></li>
-                        <li className="navigation__item"><Link className="navigation__link link" data-id="1" to="/onas">O nas</Link></li>
-                        <li className="navigation__item"><Link className="navigation__link link" data-id="2" to="/oferta">Oferta</Link></li>
-                        <li className="navigation__item"><Link className="navigation__link link" data-id="3" to="/realizacje">Realizacje</Link></li>
-                        <li className="navigation__item"><Link className="navigation__link link" data-id="4" to="/kontakt">Kontakt</Link></li>
+                        <li className="navigation__item"><NavLink className="navigation__link link" data-id="0" to="/" exact>Strona Główna</NavLink></li>
+                        <li className="navigation__item"><NavLink className="navigation__link link" data-id="1" to="/onas">O nas</NavLink></li>
+                        <li className="navigation__item"><NavLink className="navigation__link link" data-id="2" to="/oferta">Oferta</NavLink></li>
+                        <li className="navigation__item"><NavLink className="navigation__link link" data-id="3" to="/realizacje">Realizacje</NavLink></li>
+                        <li className="navigation__item"><NavLink className="navigation__link link" data-id="4" to="/kontakt">Kontakt</NavLink></li>
 
                     </ul>
                     <div className="navigation__contact">
                         <a className="navigation__phone link" href="tel:736859331"><div className="navigation__phoneIcon"></div>736 859 331</a>
-                        <a className="navigation__facebookIcon .backgroundImage" href="https://www.facebook.com"></a>
                     </div>
                 </div>
             </nav>
             <section className="router">
-                
+                <Switch>
                     <Route path="/" exact render={() =><TitlePage/>  } /> 
                     <Route path="/onas" render={() =><AboutUs/>  } /> 
                     <Route path="/oferta" render={() =><Offer/>  } /> 
                     <Route path="/realizacje" render={() =><Realizations/>  } /> 
-                    <Route path="/kontakt" render={() =><Contact/>  } /> 
+                    <Route path="/kontakt" render={() =><Contact/>  } />
+                    <Route componet = {ErrorPage} />
+                </Switch>    
+               
                    
             </section>
             <footer className="footer">
             <div className="footer__wrapper">
             <ul className="footer__list">
-                            <li className="footer__item"><Link className="footer__link texts" data-id="1" to="/onas">O nas</Link></li>
-                            <li className="footer__item"><Link className="footer__link texts" data-id="2" to="/oferta">nasza oferta</Link></li>
-                            <li className="footer__item"><Link className="footer__link texts" data-id="3" to="/realizacje">nasze realizacje</Link></li>
-                            <li className="footer__item"><Link className="footer__link texts" data-id="4" to="/kontakt">Skontaktuj się z nami</Link></li>
+                            <li className="footer__item"><NavLink className="footer__link texts" data-id="1" to="/onas">O nas</NavLink></li>
+                            <li className="footer__item"><NavLink className="footer__link texts" data-id="2" to="/oferta">nasza oferta</NavLink></li>
+                            <li className="footer__item"><NavLink className="footer__link texts" data-id="3" to="/realizacje">nasze realizacje</NavLink></li>
+                            <li className="footer__item"><NavLink className="footer__link texts" data-id="4" to="/kontakt">Skontaktuj się z nami</NavLink></li>
 
                          </ul>
                          
@@ -80,7 +83,7 @@ class App extends React.Component {
                                 <div className="footer__image location"></div>
                                 <p className="footer__text texts">Jawidz 8A/3, 21-077 Spiczyn</p>
                             </div>
-                            <a className="footer__contact" href="https://www.facebook.com">
+                            <a className="footer__contact" href="https://www.facebook.com/wwwcarver/">
                                 <div className="footer__image facebook"></div>
                                 <p className="footer__text texts">facebook</p>
                             </a>
@@ -92,6 +95,7 @@ class App extends React.Component {
             </footer>
             <div className="scrollUp">
             </div> 
+   
         </BrowserRouter>
         );
     }    

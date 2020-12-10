@@ -20,10 +20,6 @@ class Menu{
     }
 
     changePage(e){
-        this.links.forEach((link) => {
-            link.classList.remove("navigation__link--active");
-        });
-       this.links[e.target.dataset.id].classList.add("navigation__link--active");
        this.icon.classList.remove("header__menuButton--active");
        this.navigation.classList.remove("navigation--active");
     }

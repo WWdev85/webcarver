@@ -5,6 +5,10 @@ class Contact extends React.Component {
     
     componentDidMount(){
         const form = new Form();
+        window.scrollTo({
+            top: 0 ,
+            
+       });
        
     }
    
@@ -46,7 +50,7 @@ class Contact extends React.Component {
                         <div className="contact__image adress"></div>
                         <p className="contact__text texts">Jawidz 8A/3, 21-077 Spiczyn</p>
                     </a>
-                    <a className="contact__field " href="https://www.facebook.com">
+                    <a className="contact__field " href="https://www.facebook.com/wwwcarver/">
                         <div className="contact__image facebook"></div>
                         <p className="contact__text texts">facebook</p>
                     </a>

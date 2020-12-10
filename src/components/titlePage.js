@@ -7,6 +7,10 @@ class titlePage extends React.Component {
     componentDidMount(){
         new Slider();
         new Portfolio();
+        window.scrollTo({
+            top: 0 ,
+            
+       });
     }
     render(){
 

@@ -23,7 +23,7 @@
      }
 
     &--active{
-        background-color: rgba(256,256,256,0.95);
+        background-color: rgba(256,256,256,1);
         left:0;
         right:0;
         @media(min-width: 1024px){
@@ -73,41 +73,38 @@
 
                     }
 
-                   
-
-                
-                    &--active{
-                        display: block;
-                        background-color:$primaryColor;
-                        width: 100%;
-                        @media(min-width: 1024px){
-                            flex-direction: row;
-                            background-color:transparent;
-                            width: auto;
-                            display: inline;
-                            color: $primaryColor;
-                            &:after{
-                                content: "";
-                                bottom: -5px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                width: 110%;
-                                height: 2px;
-                                position: absolute;
-                                background-color: $primaryColor;
-                                animation: underline 0.2s ease;
-                            }
+                }
+                .active{
+                    display: block;
+                    background-color:$primaryColor;
+                    width: 100%;
+                    @media(min-width: 1024px){
+                        flex-direction: row;
+                        background-color:transparent;
+                        width: auto;
+                        display: inline;
+                        color: $primaryColor;
+                        &:after{
+                            content: "";
+                            bottom: -5px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 110%;
+                            height: 2px;
+                            position: absolute;
+                            background-color: $primaryColor;
+                            animation: underline 0.2s ease;
                         }
+                    }
 
-                        @keyframes underline {
-                            0%{
-                                left: -20%;
-                            }
-                            100%{
-                                left: 70%;
-                            }
-                            
+                    @keyframes underline {
+                        0%{
+                            left: -20%;
                         }
+                        100%{
+                            left: 70%;
+                        }
+                        
                     }
                 }
             }

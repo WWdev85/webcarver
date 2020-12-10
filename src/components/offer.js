@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 
 class Offer extends React.Component {
 
+     
+    componentDidMount(){
+        window.scrollTo({
+            top: 0 ,
+            
+       });
+    }
  
    
     render(){

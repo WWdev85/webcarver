@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 
 class AboutUs extends React.Component {
 
- 
+  
+    componentDidMount(){
+        window.scrollTo({
+            top: 0 ,
+            
+       });
+    }   
    
     render(){
 
